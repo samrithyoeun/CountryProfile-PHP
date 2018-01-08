@@ -1,0 +1,100 @@
+*{
+    font-family: 'Roboto Condensed', Calibri;
+}
+.container{
+    box-sizing: border-box;
+    position: relative;
+    width: 75vw;
+    margin: 0 auto;
+    padding-top:25vh;
+}
+
+h1{
+
+    font-size: 30px;
+    color: white;
+    font-weight: normal;
+    margin: 5px;
+    margin-right: 0;
+    padding-left: 10px;
+}
+
+input[type=text] {
+    box-sizing: border-box;
+    padding-left: 15px;
+    font-size: 25px;
+    background: white;
+    opacity: 0.55;
+    width: 75vw;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+
+}
+
+input[type=text]:focus{
+    outline:none;
+}
+
+#btnSubmit{
+    font-size: 25px;
+    height: 40px;
+    color: white;
+    background: rgba(0,0,0,0);
+    border-radius: 30px;
+    margin-top: 5px;
+    padding:5px;
+    width: 120px;
+    border: 2px solid white;
+
+}
+
+span{
+    font-size: 23px;
+    color: black;
+}
+
+#footer{
+    position: fixed;
+    right:40px;
+    bottom:40px;
+}
+
+.content{
+    box-sizing: border-box;
+    width: 75vw;
+    margin: 0 auto;
+    margin-top: 3vh;
+    background: rgba(91, 128, 138, 0.54);
+    border-radius: 20px;
+    padding-bottom: 30px;
+}
+
+img{
+    width: 20vw;
+    margin: 30px;
+}
+
+table{
+    margin:30px;
+    font-size: 25px;
+    color: white;
+}
+
+.bottom-content td{
+    width: 10vw;
+}
+caption{
+    text-align: left;
+}
+
+a{
+    border-radius: 30px;
+    border: 2px white solid;
+    color: white;
+    background: rgba(255,255,255,0);
+    padding: 5px 15px 5px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    margin:10px;
+}

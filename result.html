@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Countries code</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Kelly Meyers">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link href="decoration/cloud-background.css" rel="stylesheet" type="text/css">
+    <link href="decoration/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style>
+        input[type="text"]{
+            width: 66vw;
+        }
+
+        #btnSubmit{
+            width: 8vw;
+        }
+
+
+        #clouds{
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+            width: 100%;
+            overflow-x: hidden;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+
+<div>
+    <div class="container" style="padding-top: 30px">
+        <form action="search-country">
+            <h1>Enter the country's name :</h1>
+            <input type="text" name="countryName">
+            <input type="submit" id="btnSubmit" value="SEARCH">
+
+        </form>
+    </div>
+
+    <div class="content">
+        <div>
+        <div class="top-content">
+            <img src="image/kh.png" alt="KH flag" style="float: left">
+            <table style="float:left">
+                <tr>
+                    <td>Country : </td> <td> datahere</td>
+                </tr>
+                <tr>
+                    <td>Country Code :&nbsp; </td><td> datahere</td>
+                </tr>
+                <tr>
+                    <td>ISO Code : </td> <td> datahere</td>
+                </tr>
+                <tr>
+                    <td>Population : </td> <td> datahere</td>
+                </tr>
+                <tr>
+                    <td>Area : </td> <td> datahere</td>
+                </tr>
+                <tr>
+                    <td>GDP : </td> <td> datahere</td>
+                </tr>
+
+
+            </table>
+
+            <div style="clear: both;margin:25px;">
+                <a href="" style="float: left"> &lt; Home</a>
+                <a href="" style="float: left">CRUD &gt; </a>
+
+            </div>
+        </div>
+        </div>
+
+<div style="clear: both;"></div>
+
+    </div>
+
+    <div id="footer">
+        <span>Lectured by: Pro. Daru Sima</span><br>
+        <span>Created &nbsp;by: Mr. Samrith Yoeun</span>
+    </div>
+</div>
+    <div id="clouds">
+        <div id="cloud3"></div>
+        <div id="cloud1"></div>
+        <div id="cloud2"></div>
+
+
+    </div>
+</body>
+</html>
