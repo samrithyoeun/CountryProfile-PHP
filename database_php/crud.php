@@ -10,19 +10,42 @@
     $population = $_POST['population'];
     $area = $_POST['area'];
     $gdp = $_POST['gdp'];
+    $flag=  $_FILES["fileToUpload"]["name"];
 
     switch(strtolower($_POST['action'])){
         case "add country":
-            echo "add country";
+                uploadImage();
+                $sql = "INSERT INTO tblCountry VALUES ($id,'$name','$phone','$iso2','$iso3',$population,$area,'$gdp','$flag')";
+                if (mysqli_query($link, $sql)) {
+                    header('location:GetCountry.php?countryName='.$name);
+                } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($link);
+                }
+
 
             break;
         case "update country":
-            echo "update country";
+            uploadImage();
+            $sql = "UPDATE tblCountry SET name = '$name', iso ='$iso2', iso3 ='$iso3', code ='$phone',population =$population,area =$area,gdp ='$gdp', flag ='$flag' WHERE id= $id" ;
+            if (mysqli_query($link, $sql)) {
+                header('location:GetCountry.php?countryName='.$name);
+            } else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($link);
+            }
+
+
+
             break;
         case "delete country":
-            echo "delete country";
+            $sql ="DELETE FROM tblCountry WHERE id =$id";
+            if (mysqli_query($link, $sql)) {
+                header('location:../result-null.php?message= we successfully delete the data!');
+            } else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($link);
+            }
             break;
 
     }
 
+    $link->close();
 ?>

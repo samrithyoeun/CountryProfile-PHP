@@ -14,7 +14,8 @@
     <style>
 
         input[type="text"]{
-            width: 20vw;
+            width: 22vw;
+            border-radius: 10px;
         }
 
         table{
@@ -22,11 +23,13 @@
         }
 
         input[type=submit]{
-
             font-size: 50px;
-            height: 30px;
             margin-top: 5px;
+            height: 50px;
 
+        }
+        p{
+            margin: 10px 0px 10px 0px;
         }
     </style>
 </head>
@@ -35,16 +38,20 @@
 
 <div>
 
-
-    <div class="content">
-
         <form action="database_php/crud.php" method="POST" enctype="multipart/form-data">
 
 
             <br>
             <br>
             <table>
-                <tr> <td>CID : </td> <td><input type="text" name ="id" /></td></tr>
+                <tr>
+                    <td colspan="2">
+                        <p style=>For ADD and UPDATE, we need to complete all the input , <br>For DELETE function we can  just fill in the CID is enough</p>
+                    </td>
+                </tr>
+                <tr> <td>CID : </td> <td><input type="text" name ="id" /></td>
+
+                </tr>
                 <tr>
                     <td>Country Name : </td> <td> <input type="text" name ="name" value="Kampuchea"/></td>
                 </tr>
@@ -64,29 +71,23 @@
                 <tr>
                     <td>Total Area : &nbsp;&nbsp;&nbsp;</td> <td><input type="text" name ="area" value="181035"/></td>
                 </tr>
-                <tr>20.02 billion
+                <tr>
                     <td>Country GDP : </td> <td><input type="text" name="gdp" value="20.02 billion"/><br> </td>
                 </tr>
                 <tr>
-                    <td>Country GDP : </td> <td><input type="file" name="fileToUpload" id="fileToUpload"/><br> </td>
+                    <td>Country Flag : </td> <td><input type="file" name="fileToUpload" id="fileToUpload"/><br> </td>
                 </tr>
-                <tr >
-                     <td colspan="2" style="text-align: center;">
-                        <input type="submit" value="ADD COUNTRY" class="btnSubmit" name="action" >
-                        <input type="submit" value="DELETE COUNTRY" class="btnSubmit" name="action" >
-                        <input type="submit" value="UPDATE COUNTRY" class="btnSubmit" name="action" >
+
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="ADD COUNTRY" class="btnSubmit" name="action" id="add">
+                        <input type="submit" value="DELETE COUNTRY" class="btnSubmit" name="action"  id="update">
+                        <input type="submit" value="UPDATE COUNTRY" class="btnSubmit" name="action" id="delete">
                     </td>
                 </tr>
             </table>
 
             <br>
-
-
-    </div>
-
-
-
-</div>
 
 </form>
 
@@ -94,10 +95,11 @@
 </div>
 
 <div id="footer">
-    <span>Lectured by: Pro. Dorin Sima</span><br>
+    <span>Lectured by: Pro. Radu Cretulescu</span><br>
     <span>Created &nbsp;by: Mr. Samrith Yoeun</span>
 </div>
 </div>
+
 
 </body>
 </html>

@@ -35,6 +35,12 @@
             background: rgba(0,0,0,0.7);
         }
 
+        p{
+            margin:30px;
+            font-size: 25px;
+            color: white;
+        }
+
     </style>
 </head>
 <body>
@@ -62,29 +68,7 @@
             </div>
         <div class="top-content" style="clear: both; margin: 35px;">
 
-            <img src="image/<?php echo $_SESSION['country']['flag']; ?> " alt="KH flag" style="float: left;">
-            <table style="float:left">
-                <tr>
-                    <td>Country Name : </td> <td> <?php echo $_SESSION['country']['name']; ?> </td>
-                </tr>
-                <tr>
-                    <td>Telephone Code :&nbsp;&nbsp;&nbsp;&nbsp;  </td><td>+ <?php echo $_SESSION['country']['code']; ?> </td>
-                </tr>
-                <tr>
-                    <td>ISO | ISO3  : </td> <td> <?php echo $_SESSION['country']['iso']." | ".$_SESSION['country']['iso3']; ?> </td>
-                </tr>
-                <tr>
-                    <td>Population : </td> <td> <?php echo $_SESSION['country']['population']; ?> people </td>
-                </tr>
-                <tr>
-                    <td>Total Area : </td> <td> <?php echo $_SESSION['country']['area']; ?> Km<sup>2</sup> </td>
-                </tr>
-                <tr>
-                    <td>Country's GDP : </td> <td> <?php echo $_SESSION['country']['gdp']; ?> USD </td>
-                </tr>
-
-
-            </table>
+           <p><?php echo $_GET['message']?></p>
 
             <div style="clear: both;margin:25px;">
 

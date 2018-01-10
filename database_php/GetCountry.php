@@ -7,7 +7,7 @@
  */
 
 include_once "connection.php";
-$name  = $_POST['countryName'];
+$name  = $_GET['countryName'];
 $sql = "SELECT * FROM tblCountry Where LOWER(name) = LOWER('$name')";
 $result = $link->query($sql);
 
@@ -21,10 +21,10 @@ if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     $link->close();
     $_SESSION['country']= $row ;
-    header('location:result.php');
+    header('location:../result.php');
 
 } else {
-    echo "0 results";
+    header("location:../result-null.php");
     $link->close();
 }
 

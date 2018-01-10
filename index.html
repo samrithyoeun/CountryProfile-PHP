@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="decoration/validateTextField.js"/>
+
     <style>
     #btnSubmit{
         position: absolute;
@@ -21,7 +23,7 @@
 <body>
 
     <div class="container">
-        <form action="database_php/GetCountry.php" method="POST">
+        <form action="database_php/GetCountry.php" method="GET">
             <h1>Enter the country's name :</h1>
             <input type="text" name="countryName"> <br>
             <input type="submit" id="btnSubmit" value="SEARCH">
