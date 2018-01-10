@@ -39,7 +39,6 @@
         case "delete country":
             $sql ="DELETE FROM tblCountry WHERE id =$id";
             if (mysqli_query($link, $sql)) {
-                header('location:../result-null.php?message= we successfully delete the data!');
             } else {
                 echo "Error: " . $sql . "<br>" . mysqli_error($link);
             }

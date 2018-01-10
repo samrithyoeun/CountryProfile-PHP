@@ -24,7 +24,7 @@ if ($result->num_rows > 0) {
     header('location:../result.php');
 
 } else {
-    header("location:../result-null.php");
+    header("location:../result-null.php?message=sorry, we cannot find this country!");
     $link->close();
 }
 
