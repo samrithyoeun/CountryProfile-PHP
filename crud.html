@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Countries code</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link href="decoration/cloud-background.css" rel="stylesheet" type="text/css">
+    <link href="decoration/style.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <style>
+
+        input[type="text"]{
+            width: 20vw;
+        }
+
+        table{
+            margin: 0 auto;
+        }
+
+        input[type=submit]{
+
+            font-size: 50px;
+            height: 30px;
+            margin-top: 5px;
+
+        }
+    </style>
+</head>
+<body>
+
+
+<div>
+
+
+    <div class="content">
+
+        <form action="database_php/crud.php" method="POST" enctype="multipart/form-data">
+
+
+            <br>
+            <br>
+            <table>
+                <tr> <td>CID : </td> <td><input type="text" name ="id" /></td></tr>
+                <tr>
+                    <td>Country Name : </td> <td> <input type="text" name ="name" value="Kampuchea"/></td>
+                </tr>
+                <tr>
+                    <td>ISO 2 : </td> <td> <input type="text" name ="iso2" value="KH"/></td>
+                </tr>
+
+                <tr>
+                    <td>ISO 3 : </td><td> <input type="text" name ="iso3" value="KHM"/></td>
+                </tr>
+                <tr>
+                    <td>Telephone Code : </td> <td> <input type="text" name ="phone" value ="855"/></td>
+                </tr>
+                <tr>
+                    <td>Population : </td> <td> <input type="text" name ="population" value="15700000"/></td>
+                </tr>
+                <tr>
+                    <td>Total Area : &nbsp;&nbsp;&nbsp;</td> <td><input type="text" name ="area" value="181035"/></td>
+                </tr>
+                <tr>20.02 billion
+                    <td>Country GDP : </td> <td><input type="text" name="gdp" value="20.02 billion"/><br> </td>
+                </tr>
+                <tr>
+                    <td>Country GDP : </td> <td><input type="file" name="fileToUpload" id="fileToUpload"/><br> </td>
+                </tr>
+                <tr >
+                     <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="ADD COUNTRY" class="btnSubmit" name="action" >
+                        <input type="submit" value="DELETE COUNTRY" class="btnSubmit" name="action" >
+                        <input type="submit" value="UPDATE COUNTRY" class="btnSubmit" name="action" >
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+
+
+    </div>
+
+
+
+</div>
+
+</form>
+
+
+</div>
+
+<div id="footer">
+    <span>Lectured by: Pro. Dorin Sima</span><br>
+    <span>Created &nbsp;by: Mr. Samrith Yoeun</span>
+</div>
+</div>
+
+</body>
+</html>

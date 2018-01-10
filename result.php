@@ -3,14 +3,14 @@
 <head>
     <title>Countries code</title>
     <meta charset="utf-8">
-    <meta name="author" content="Kelly Meyers">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <link href="decoration/cloud-background.css" rel="stylesheet" type="text/css">
-    <link href="decoration/style.css" rel="stylesheet" type="text/css">
+
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="decoration/style.css">
     <style>
         input[type="text"]{
             width: 66vw;
@@ -29,14 +29,23 @@
             overflow-x: hidden;
             opacity: 0.7;
         }
+        a:hover{
+            color: white;
+            background: rgba(0,0,0,0.7);
+        }
+
     </style>
 </head>
 <body>
 
+<?php
+    session_start();
+    if($_SESSION['country'] == null) header('location:index.html');
+?>
 
 <div>
     <div class="container" style="padding-top: 30px">
-        <form action="search-country">
+        <form action="database_php/GetCountry.php" method="POST">
             <h1>Enter the country's name :</h1>
             <input type="text" name="countryName">
             <input type="submit" id="btnSubmit" value="SEARCH">
@@ -46,34 +55,38 @@
 
     <div class="content">
         <div>
-        <div class="top-content">
-            <img src="image/kh.png" alt="KH flag" style="float: left">
+            <div style="clear: both; margin: 25px;">
+                <a href="index.html" style="float: left; margin-left: 35px" > &lt; Homepage</a>
+                <a href="crud.html" style="float: left">CRUD Function&gt; </a>
+            </div>
+        <div class="top-content" style="clear: both; margin: 35px;">
+
+            <img src="image/<?php echo $_SESSION['country']['flag']; ?> " alt="KH flag" style="float: left;">
             <table style="float:left">
                 <tr>
-                    <td>Country : </td> <td> datahere</td>
+                    <td>Country Name : </td> <td> <?php echo $_SESSION['country']['name']; ?> </td>
                 </tr>
                 <tr>
-                    <td>Country Code :&nbsp; </td><td> datahere</td>
+                    <td>Telephone Code :&nbsp;&nbsp;&nbsp;&nbsp;  </td><td>+ <?php echo $_SESSION['country']['code']; ?> </td>
                 </tr>
                 <tr>
-                    <td>ISO Code : </td> <td> datahere</td>
+                    <td>ISO | ISO3  : </td> <td> <?php echo $_SESSION['country']['iso']." | ".$_SESSION['country']['iso3']; ?> </td>
                 </tr>
                 <tr>
-                    <td>Population : </td> <td> datahere</td>
+                    <td>Population : </td> <td> <?php echo $_SESSION['country']['population']; ?> people </td>
                 </tr>
                 <tr>
-                    <td>Area : </td> <td> datahere</td>
+                    <td>Total Area : </td> <td> <?php echo $_SESSION['country']['area']; ?> Km<sup>2</sup> </td>
                 </tr>
                 <tr>
-                    <td>GDP : </td> <td> datahere</td>
+                    <td>Country's GDP : </td> <td> <?php echo $_SESSION['country']['gdp']; ?> USD </td>
                 </tr>
 
 
             </table>
 
             <div style="clear: both;margin:25px;">
-                <a href="" style="float: left"> &lt; Home</a>
-                <a href="" style="float: left">CRUD &gt; </a>
+
 
             </div>
         </div>
@@ -84,16 +97,16 @@
     </div>
 
     <div id="footer">
-        <span>Lectured by: Pro. Daru Sima</span><br>
+        <span>Lectured by: Pro. Radu Cretulescu</span><br>
         <span>Created &nbsp;by: Mr. Samrith Yoeun</span>
     </div>
 </div>
-    <div id="clouds">
-        <div id="cloud3"></div>
-        <div id="cloud1"></div>
-        <div id="cloud2"></div>
+<div id="clouds">
+    <div id="cloud3"></div>
+    <div id="cloud1"></div>
+    <div id="cloud2"></div>
+</div>
+<?php //session_abort()?>
 
-
-    </div>
 </body>
 </html>

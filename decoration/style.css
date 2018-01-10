@@ -8,6 +8,29 @@
     margin: 0 auto;
     padding-top:25vh;
 }
+img{
+    width: 24vw;
+    margin: 35px;
+}
+
+table{
+    margin:30px;
+    font-size: 25px;
+    color: white;
+}
+
+a{
+    border-radius: 30px;
+    border: 2px white solid;
+    color: white;
+    background: rgba(255,255,255,0);
+    padding: 5px 15px 5px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    margin:10px;
+    margin-left: 25px;
+}
+
 
 h1{
 
@@ -36,7 +59,7 @@ input[type=text]:focus{
     outline:none;
 }
 
-#btnSubmit{
+#btnSubmit, input[type=submit]{
     font-size: 25px;
     height: 40px;
     color: white;
@@ -70,31 +93,3 @@ span{
     padding-bottom: 30px;
 }
 
-img{
-    width: 20vw;
-    margin: 30px;
-}
-
-table{
-    margin:30px;
-    font-size: 25px;
-    color: white;
-}
-
-.bottom-content td{
-    width: 10vw;
-}
-caption{
-    text-align: left;
-}
-
-a{
-    border-radius: 30px;
-    border: 2px white solid;
-    color: white;
-    background: rgba(255,255,255,0);
-    padding: 5px 15px 5px 15px;
-    text-decoration: none;
-    font-size: 20px;
-    margin:10px;
-}
